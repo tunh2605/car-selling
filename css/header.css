@@ -96,11 +96,8 @@ body{
     }
 }
 
-.hidden-menu{
-    display: none;
-}
-
 .hidden-menu {
+    display: none;
     position: relative;
     > .drop{
         display: none;

@@ -1,0 +1,154 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color1: #fff;
+    --color2: #191919;
+    --color3: #cecece;
+    --color4: #ff2121;
+    --color5: #d20000;
+}
+
+body{
+    background-color: var(--color3);
+}
+
+.header {
+    z-index: 1000;
+    position: sticky;
+    top: -1;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 0 5px var(--color3);
+}
+
+.header-container{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;    
+}
+
+.nav-logo {
+    padding: 5px 0;
+    width: 10%;
+    > a > img {
+        width: 100px;
+    }
+}
+
+.nav-items-container{
+    display: flex;
+    justify-content: left;
+    width: 90%;
+    > .car-type, .hidden-menu{
+        padding: 13px;
+        font-size: 14px;
+    }
+    > .menu{
+        display: flex;
+        > .nav-item{
+            padding: 13px;
+            font-size: 14px;
+        }
+    }
+}
+
+.car-type .nav-link::after{
+    content: " ";
+    border: 0.5px solid var(--color2);
+    margin-left: 26px;
+}
+
+.nav-item:hover, .hidden-menu:hover{
+    color: var(--color4);
+    > .drop{
+        color: var( --color2 );
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+    }
+}
+
+.nav-item, .hidden-menu {
+    position: relative;
+    > .drop{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -5%;
+        background-color: var(--color1);
+        border: 0.5px solid var(--color3);
+        > div{  
+            > a{        
+                margin: 0 10px;
+                padding: 15px 0;
+                text-align: left;
+                border-bottom: 0.5px solid var(--color3);            
+                transition-duration: 0.1s;  
+            }
+        }
+    }    
+    > .drop div:hover{
+        background-color: var(--color5);
+        color: var(--color1);
+    }
+}
+
+.hidden-menu{
+    display: none;
+}
+
+.hidden-menu {
+    position: relative;
+    > .drop{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: -5%;
+        background-color: var(--color1);
+        border: 0.5px solid var(--color3);
+        > div{  
+            > a{        
+                margin: 0 15px;
+                padding: 30px 30px 10px 0;
+                text-align: left;
+                border-bottom: 0.5px solid var(--color3);            
+                transition-duration: 0.1s; 
+            }
+            .side{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background-color: var(--color1);
+                border: 0.5px solid var(--color3);
+                color: var(--color2);
+                > div > a{
+                    margin: 0 15px;
+                    padding: 10px 0;
+                    text-align: left;
+                    border-bottom: 0.5px solid var(--color3);            
+                    transition-duration: 0.1s;
+                }
+            }
+        }
+        > div:hover .side{
+            display: block;
+        }
+    }    
+    > .drop > div:hover{
+        background-color: var(--color5);
+        color: var(--color1);
+    }
+}
+
+@media screen and ( max-width : 991px ){
+    .menu .nav-item{
+        display: none;
+    }
+    .hidden-menu{
+        display: block;
+    }
+}

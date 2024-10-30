@@ -15,10 +15,23 @@ body{
     background-color: var(--color3);
 }
 
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color2);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
 .header {
+    background-color: var(--color1);
     z-index: 1000;
     position: sticky;
-    top: -1;
+    top: 0;
     margin: 0 auto;
     width: 100%;
     box-shadow: 0 0 5px var(--color3);
@@ -27,21 +40,25 @@ body{
 .header-container{
     display: flex;
     width: 90%;
-    margin: 0 auto;    
+    margin: 0 auto;  
 }
 
 .nav-logo {
     padding: 5px 0;
-    width: 10%;
+    display: flex;
+    border-bottom: 0.5px solid var(--color3);
+    justify-content: center;
+    width: 100%;
     > a > img {
-        width: 100px;
+        width: 100px; 
+        margin: 5px;   
     }
 }
 
 .nav-items-container{
     display: flex;
     justify-content: left;
-    width: 90%;
+    width: 100%;
     > .car-type, .hidden-menu{
         padding: 13px;
         font-size: 14px;

@@ -1,4 +1,4 @@
-*, *::after, *::before {
+*:not(.fab){
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
@@ -6,13 +6,9 @@
 :root {
     --color1: #fff;
     --color2: #191919;
-    --color3: #cecece;
+    --color3: #b4b4b4;
     --color4: #ff2121;
     --color5: #d20000;
-}
-
-body{
-    background-color: var(--color3);
 }
 
 .overlay{
@@ -20,11 +16,11 @@ body{
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    left: 0; 
+    opacity: 0;   
+    z-index: -1;
     background-color: var(--color2);
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity 0.25s ease-out;
 }
 
 .header {

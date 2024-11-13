@@ -100,7 +100,7 @@
                 padding: 15px 0;
                 text-align: left;
                 border-bottom: 0.5px solid var(--color3);            
-                transition-duration: 0.1s;  
+                transition: 0.1s ease-out;  
             }
         }
     }    
@@ -126,7 +126,7 @@
                 padding: 30px 30px 10px 0;
                 text-align: left;
                 border-bottom: 0.5px solid var(--color3);            
-                transition-duration: 0.1s; 
+                transition: 0.1s ease-out; 
             }
             .side{
                 display: none;
@@ -141,7 +141,7 @@
                     padding: 10px 0;
                     text-align: left;
                     border-bottom: 0.5px solid var(--color3);            
-                    transition-duration: 0.1s;
+                    transition: 0.1s ease-out;
                 }
             }
         }
@@ -193,11 +193,20 @@
     padding-right: 30px;
 }
 
+.car-drop-item:hover{
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
 @media screen and ( max-width : 991px ){
     .menu .nav-item{
         display: none;
     }
     .hidden-menu{
         display: block;
+    }
+
+    .car-drop-item span{
+        padding: 0;
     }
 }

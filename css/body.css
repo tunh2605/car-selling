@@ -41,11 +41,11 @@
 }
 
 .item:hover .img{
-    background-color: var(--color4);
+    background-color: var(--color5);
 }
 
 .item:hover .text{
-    color: var(--color4);
+    color: var(--color5);
 }
 
 @media screen and ( max-width : 991px ){

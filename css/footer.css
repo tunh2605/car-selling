@@ -74,7 +74,7 @@
     padding: 10px;
     text-align: center; 
     margin: 0 2px;
-    transition-duration: 0.3s;
+    transition: 0.3s ease-out;
 }
 
 .fa-facebook-f:hover{
@@ -96,7 +96,7 @@
     .footer-top-content .right{
         width: 100%;
         margin-top: 30px;
-        >  h4, .icon{
+        > h4, .icon{
             float: left;
         }
     }

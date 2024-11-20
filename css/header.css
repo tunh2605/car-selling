@@ -172,16 +172,9 @@
     color: var(--color2);
 }
 
-.car-drop img{
+.car-drop .model-img img{
     width: 100px;
     height: auto;
-}
-
-.car-drop-item a{
-    border-bottom: 0.5px solid var(--color3); 
-    display: flex;
-    margin: auto 30px;
-    padding: 15px 0;
 }
 
 .car-drop-item span{
@@ -191,6 +184,13 @@
     line-height: 3.43;
     width: 100%;
     padding-right: 30px;
+}
+
+.car-drop-item a{
+    border-bottom: 0.5px solid var(--color3); 
+    display: flex;
+    margin: auto 30px;
+    padding: 15px;
 }
 
 .car-drop-item:hover{

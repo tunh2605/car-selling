@@ -4,7 +4,7 @@
     padding: 50px 0;
 }
 
-.item{   
+.body-item .item{   
     padding: 10px;
     display: block;
     > a{
@@ -15,7 +15,7 @@
     }
 }
 
-.img{
+.body-item .img{
     position: relative;
     width: 50px;
     height: 50px;
@@ -25,7 +25,7 @@
     transition-duration: 0.3s;
 }
 
-.img img{
+.body-item .img img{
     width: 30px;
     height: auto;
     position: absolute;
@@ -34,18 +34,74 @@
     transform: translate(-50%,-50%);
 }
 
-.text{
+.body-item .text{
     display: flex;
     align-items: center;
     transition-duration: 0.3s;
 }
 
-.item:hover .img{
+.body-item .item:hover .img{
     background-color: var(--color5);
 }
 
-.item:hover .text{
+.body-item .item:hover .text{
     color: var(--color5);
+}
+
+.discover-container{
+    width: 85%;
+    margin: 0 auto !important;
+    > h1{
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+.discover-container .item{
+    padding: 0;
+}
+
+.discover-container .img{
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid transparent;
+    transition: 0.25s ease;
+}
+
+.discover-container .img img{
+    width: 100%;
+    height: auto;
+}
+
+.discover-container a{
+    color: var(--color2);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.discover-container .text{
+    margin-top: 5px;
+    margin-right: 10px;
+    padding-left: 15px;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+.discover-container .text::before{
+    content: ">";
+    color: #d5001c;
+    left: 0px;
+    position: absolute;
+}
+
+.discover-container .item:hover .img{
+    border-bottom: 2px solid red;
+}
+
+.discover-container .item:hover .text{
+    color: red;
 }
 
 @media screen and ( max-width : 991px ){
